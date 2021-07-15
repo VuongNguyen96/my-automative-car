@@ -1,0 +1,146 @@
+/* Global setting */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    background-color: green;
+    color:red;
+}
+/* End of Global setting */
+
+/* The start of header */
+.container {
+    /* The automobile part is getting bigger 
+    Plus, it pushes the content into middle*/
+    /* What is the role of rem? */
+    padding: 1rem;
+    margin: 0 auto; 
+    max-width: 100%;
+    /* Max width 100% ==> mobile-friendly*/
+    width: 1000px;
+}
+
+header{
+    background-image: url("car-bg.jpg");
+    background-size: cover;
+    background-position:center center;
+    display:flex;
+    color:white;
+    flex-direction: column;
+    /* Why do we use flex-direction */
+    align-items: flex-start;
+    min-height: calc(100vh - 102px);
+}
+nav {
+    /* There are two separate elements in <nav>
+    <ul> and <div>. They have different styling */
+    display: flex;
+    justify-content: space-between;
+}
+nav .logo {
+    font-size: 2.5rem;
+}
+nav ul {
+    /* make it horizontal */
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+nav li a {
+    /* Styling */
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+}
+nav li:not(:nth-child(5)) a:hover{
+    background-color: gray;
+    opacity:0.5;
+}
+.selected{
+    font-weight:bold;
+}
+.highlight{
+    background-color: #00c2ff;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+}
+/* The end of header */
+
+/* The start of body */
+.content {
+    /* Why do we have to use margin:auto; 
+    and max-width:100%; */
+    font-size: 2rem;
+    margin: auto;
+    max-width: 100%;
+}
+.content h1{
+    color:rgb(0, 194, 255);
+    margin-bottom:0;
+}
+
+/* The end of body */
+
+/* The start of footer */
+footer{
+    background-color: black;
+    color:white;
+    padding: 1rem;
+}
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+}
+
+footer strong {
+    color: #00c2ff;
+}
+
+footer p {
+    margin: 0;
+}
+/* The end of footer */
+@media screen and (max-width: 700px) {
+    .content {
+        font-size: 1.4rem;
+        margin: 2rem auto 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    nav .highlight {
+        display: none;
+    }
+
+    footer ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer li {
+        margin: 1rem;
+        text-align: center;
+    }
+}
+/* Testing and trivia */
+
+
